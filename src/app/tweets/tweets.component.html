@@ -1,23 +1,61 @@
-Her indsættes en liste af tweets. Husk at design html i denne fil og css i tweets.component.css
+<!-- I have not added html as you already know i'm the gui gueen,
+     so i have focused on the parts where i stuggle instad-->
 
-
-<div class="container">
-  <div *ngFor="let tweet of twat">
-
-    <div>date</div>
-    <div>text</div>
-    <div>likes</div>
-
-    <div>{{tweet.date}</div>
-    <div>{{tweet.text}</div>
-    <div>{{tweet.likes}</div>
+<!-- Opgave 1
+    <div class="container">
     
+        <div>date</div>
+        <div>text</div>
+        <div>likes</div>
     </div>
+-->
+
+
+<!-- Opgave 2
+    <div *ngFor="let tweet of twat">
+
+        <div>{{tweet.date}}</div>
+        <div>{{tweet.text}}</div>
+        <div>{{tweet.likes}}</div>
+         
     </div>
+-->
+
+
+<!-- Opgave 3
+
+<div *ngFor="let tweet of twat" [ngClass]="tweet.text.includes(tweets) && tweets !== '' ? 'ColourHighlight' : '' ">
+  
+<div>{{tweet.date}}</div>
+<div>{{tweet.text}}</div>
+<div>{{tweet.likes}}</div>
+
+</div>
+
+<input type="text" (change)='Search($event)'>
+<p>{{tweets}}</p>
+
+
+-->
+
+
+ 
+<!-- opgave 4 -->
+
+ <div *ngFor="let tweet of twat" [ngClass]="tweet.text.includes(tweets) && tweets !== '' ? 'ColourHighlight' : '' || (tweet.date.includes('May') && tweet.likes == 150000)">
+  
+<div>{{tweet.date}}</div>
+<div>{{tweet.text}}</div>
+<div>{{tweet.likes}}</div>
+
+</div>
+
+<input type="text" (change)='Search($event)'>
+<p>{{tweets}}</p>
 
 
 
 
 
 
-    </html>
+
