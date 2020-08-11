@@ -22,7 +22,7 @@
 -->
 
 
-<!-- Opgave 3
+<!-- Opgave 3 
 
 <div *ngFor="let tweet of twat" [ngClass]="tweet.text.includes(tweets) && tweets !== '' ? 'ColourHighlight' : '' ">
   
@@ -34,15 +34,16 @@
 
 <input type="text" (change)='Search($event)'>
 <p>{{tweets}}</p>
-
-
 -->
+
+
 
 
  
 <!-- opgave 4 -->
 
- <div *ngFor="let tweet of twat" [ngClass]="tweet.text.includes(tweets) && tweets !== '' ? 'ColourHighlight' : '' || (tweet.date.includes('May') && tweet.likes == 150000)">
+<div *ngFor="let tweet of twat" [ngClass]="(tweet.date.toString().includes('May') && tweet.likes > 150000) ? 'ColourHighlight': '' ">
+
   
 <div>{{tweet.date}}</div>
 <div>{{tweet.text}}</div>

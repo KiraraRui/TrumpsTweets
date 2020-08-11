@@ -20,10 +20,10 @@ export class TweetsComponent implements OnInit {
   ngOnInit() {
   }
 
- kiri : string = '';
+  tweets : string = '';
 
  Search(event : any){
- this.kiri = event.target.value;
+ this.tweets = event.target.value;
  }
 
  IdkClassChange(){
